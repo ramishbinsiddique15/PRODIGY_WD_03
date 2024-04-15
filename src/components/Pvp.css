@@ -1,0 +1,124 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.board {
+    /* margin: auto; */
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    top: 50px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    background-color: transparent;
+    padding: 40px;
+    font-family: "Bungee Spice", sans-serif;
+    width: 20px;
+    height: 20px;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.cell-0-0{
+    border-bottom: 4px solid #00c8ff;
+    border-right: 4px solid #00c8ff;
+}
+.cell-0-1{
+    border-bottom: 4px solid #00c8ff;
+    border-right: 4px solid #00c8ff;
+}
+.cell-0-2{
+    border-right: 4px solid #00c8ff;
+}
+.cell-1-0{
+    border-bottom: 4px solid #00c8ff;
+    border-right: 4px solid #00c8ff;
+}
+.cell-1-1{
+    border-bottom: 4px solid #00c8ff;
+    border-right: 4px solid #00c8ff;
+}
+.cell-1-2{
+    border-right: 4px solid #00c8ff;
+}
+.cell-2-0{
+    border-bottom: 4px solid #00c8ff;
+}
+.cell-2-1{
+    border-bottom: 4px solid #00c8ff;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.winner{
+    font-family: "Bungee Spice", sans-serif;
+    font-size: 44px;
+
+}
+.player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player.active .box {
+    transform: scale(1.5); 
+    transition: transform 0.3s; 
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .board {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .cell {
+      font-size: 36px;
+      padding: 30px;
+    }
+  
+    .player {
+      margin-bottom: 10px;
+    }
+  
+    .winner {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .board {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .cell {
+      font-size: 28px;
+      padding: 20px;
+    }
+  
+    .winner {
+      font-size: 24px;
+    }
+  }
+  

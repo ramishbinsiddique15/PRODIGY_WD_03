@@ -1,0 +1,78 @@
+nav{
+    background-color: #00d5ff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .title h1{
+    color: rgb(0, 2, 93);
+    font-family: "Delicious Handrawn", cursive;
+    font-weight: 500;
+    font-size: 40px;
+  }
+  nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 10px;
+  }
+  nav .menu ul a{
+    text-decoration: none;
+  }
+  li{
+    color: rgb(0, 2, 93);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+  }
+  li:hover{
+    text-shadow: 2px 2px 8px rgb(0, 2, 93);
+    font-size: 22px;
+  }
+
+  @media (max-width:665px){
+    .title h1{
+      font-size: 20px;
+    }
+    li {
+      font-size: 14px;
+    }
+    li:hover {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title h1 {
+      font-size: 18px;
+    }
+  
+    li {
+      font-size: 12px;
+    }
+  
+    li:hover {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .title h1 {
+      font-size: 16px;
+    }
+  
+    li {
+      font-size: 12px;
+    }
+  
+    li:hover {
+      font-size: 14px;
+    }
+  }
+  
