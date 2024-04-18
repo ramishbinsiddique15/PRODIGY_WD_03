@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Pvp.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { faUserAlt, faDesktop, faRedo } from '@fortawesome/free-solid-svg-icons';
 
 const Pvp = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [xIsNext, setXIsNext] = useState(false);
+    // const [gameOver, setGameOver] = useState(false);
 
     const generateCellClassName = (rowIndex, cellIndex) => `cell-${rowIndex}-${cellIndex}`;
 
@@ -18,7 +19,7 @@ const Pvp = () => {
     };
 
     const handleClick = (rowIndex, cellIndex) => {
-        if (board[rowIndex * 3 + cellIndex] || calculateWinner(board)) {
+        if ( board[rowIndex * 3 + cellIndex]) {
             return;
         }
         const newBoard = [...board];
@@ -41,14 +42,24 @@ const Pvp = () => {
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+
                 return squares[a] === 'X' ? 'Player 2' : 'Player 1';
             }
+        }
+        if (squares.every(square => square !== null)) {
+          
+            return 'Tie';
         }
         return null;
     };
 
-    const winner = calculateWinner(board);
+    const restartGame = () => {
+        setBoard(Array(9).fill(null));
+        setXIsNext(false);
+        setGameOver(false);
+    };
 
+    const winner = calculateWinner(board);
     const chunkedBoard = chunkArray(board, 3);
 
     return (
@@ -75,7 +86,13 @@ const Pvp = () => {
                         </div>
                     ))}
                 </div>
-                {winner && <div className="winner">{`Winner: ${winner}`}</div>}
+                {winner  && (
+                    <div className="next-game-btn" onClick={restartGame}>
+                        <button className='next'><FontAwesomeIcon className="restart-icon" icon={faRedo} />
+                        Next Game</button>
+                    </div>
+                )}
+                {winner && <div className="winner">{winner === 'Tie' ? 'It\'s a tie!' : `Winner: ${winner}`}</div>}
             </div>
             <div className={`player ${xIsNext ? 'active' : ''}`}>
                 <FontAwesomeIcon className="usericon" icon={faUserAlt} />
