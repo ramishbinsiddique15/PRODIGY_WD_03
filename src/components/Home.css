@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    height: 75vh;
+    min-height: 75vh;
     width: 70vw;
     background: rgba(36, 0, 165, 0.306);
     margin: auto;
