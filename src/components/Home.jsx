@@ -49,7 +49,10 @@ const Home = () => {
             <div className="name">Computer</div>
           </div>
         </div>
-       <NavLink to='/pvc'> <button className="play">Play Now</button></NavLink>
+        <NavLink to="/pvc">
+          {" "}
+          <button className="play">Play Now</button>
+        </NavLink>
       </div>
     </div>
   );
