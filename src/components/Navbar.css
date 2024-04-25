@@ -63,20 +63,7 @@ nav{
 .popup ul li{
   color: orange;
   
-  text-decoration: none;
-}
-.popup ul li a {
-  text-decoration: none;
-  border: none;
-  color: inherit;
-}
-
-.popup ul li a:visited {
-  text-decoration: none;
-  border: none;
-  color: inherit;
-}
-
+ }
 
 .popup ul li:hover{
   text-shadow: 2px 2px 8px orange;
@@ -93,4 +80,8 @@ nav{
     display: block;
   }
 }
-  
+@media (max-width:344px){
+ .popup{
+   width: 70vw;
+ } 
+}
