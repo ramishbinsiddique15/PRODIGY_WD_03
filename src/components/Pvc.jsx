@@ -100,6 +100,7 @@ const Pvc = () => {
                         </div>
                     ))}
                 </div>
+                <div className="game-info">
                 {winner  && (
                     <div className="next-game-btn" onClick={restartGame}>
                         <button className='next'><FontAwesomeIcon className="restart-icon" icon={faRedo} />
@@ -107,6 +108,7 @@ const Pvc = () => {
                     </div>
                 )}
                 {winner && <div className="winner">{winner === 'Tie' ? 'It\'s a tie!' : `Winner: ${winner}`}</div>}
+            </div>
             </div>
             <div className={`player ${!xIsNext ? 'active' : ''}`}>
                 <FontAwesomeIcon className="usericon" icon={faDesktop} />

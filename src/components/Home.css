@@ -112,7 +112,7 @@
 }
 
 .play:hover {
-    font-size: 25px;
+transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
