@@ -34,6 +34,10 @@ npm run dev
 - **Player vs. Player (PvP):** Click on the grid to place your marker (X or O). The first player to get three of their markers in a row (horizontally, vertically, or diagonally) wins.
 - **Player vs. Computer (PvC):** Select the difficulty level (Easy, Medium, Hard), then click on the grid to place your marker (X). The computer will then make its move. The game ends when one player gets three markers in a row or the board is full.
 
+## Contact
+For any inquiries or feedback, you can reach out to me at [ramishbinsiddique24@gmail.com]
+
+
 
 ## Credits
 
